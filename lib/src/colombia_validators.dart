@@ -72,10 +72,13 @@ class ColombiaDiplomaticValidator extends GatedPlateValidator {
   static const String reasonLetters = 'A type letter and two country initials.';
   static const String reasonNumber = 'The number is three digits.';
 
+  static final RegExp _typeLetter = RegExp(r'^[A-Z]$');
+  static final RegExp _countryInitials = RegExp(r'^[A-Z]{2}$');
+
   @override
   PlateValidation judge(PlateEntry entry) {
-    if (!RegExp(r'^[A-Z]$').hasMatch(entry.group('type')) ||
-        !RegExp(r'^[A-Z]{2}$').hasMatch(entry.group('country'))) {
+    if (!_typeLetter.hasMatch(entry.group('type')) ||
+        !_countryInitials.hasMatch(entry.group('country'))) {
       return const PlateValidation.invalid(reasonLetters);
     }
     if (!isDigitsOfLength(entry.group('number'), 3)) {

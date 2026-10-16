@@ -104,7 +104,6 @@ abstract final class _Layout {
   static const double dashLength = 12;
 }
 
-/// The four screw holes of the shared design.
 final List<PlateBand> _holes = <PlateBand>[
   for (final double x in _Layout.holeX)
     for (final double y in _Layout.holeY)
@@ -349,10 +348,9 @@ abstract final class ColombiaPlates {
         ),
       ],
       textGroups: <PlateTextGroup>[
-        PlateTextGroup(
-          const <int>[0],
-          key: series.digitsFirst ? 'number' : 'letters',
-        ),
+        PlateTextGroup(const <int>[
+          0,
+        ], key: series.digitsFirst ? 'number' : 'letters'),
         PlateTextGroup(
           const <int>[1],
           prefix: ' ',
