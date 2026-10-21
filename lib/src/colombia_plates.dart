@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:plate_core/plate_core.dart';
 import 'package:flutter/foundation.dart';
+import 'package:plate_core/plate_core.dart';
 
 import 'colombia_alphabets.dart';
 import 'colombia_colors.dart';
@@ -41,7 +41,7 @@ import 'colombia_country.dart';
 /// width-limited below the reference height (~49 of 83 mm). Captions are
 /// sized to the measured ink *width* for the same reason, so they come out
 /// shorter than the reference too. A narrow glyph (`I`, `1`) is not width-
-/// limited and stands taller than its neighbours. `plate_core` is unchanged.
+/// limited and stands taller than its neighbours.
 ///
 /// **Not drawn.** The ministry roundel's artwork (a fisheye `◉` stands in
 /// for it), the antique plate's car graphic, the diplomatic plate's crest,
@@ -243,7 +243,6 @@ class ColombiaSeries {
   ];
 }
 
-/// No Colombian plate has a flag panel; every spec sets `noPanel`.
 const PlatePanel _noPanel = PlatePanel(box: PlateBox(0, 0, 0, _Layout.height));
 
 abstract final class ColombiaPlates {
