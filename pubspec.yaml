@@ -1,6 +1,6 @@
 name: colombia_plate
 description: "Colombia's licence plates for plate_core: private, public-service, official, diplomatic and police plates, with themes, alphabets and advisory validators."
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/ArAd1Beyranvand/colombia-plate
 resolution: workspace
 
